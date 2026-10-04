@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+button {
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #fff;
+    color: #111;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ddd;
+}
+
+/* GAMES */
+
+.games {
+    padding: 60px;
+}
+
+.games > h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.game-card {
+    max-width: 350px;
+
+    padding: 30px;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    background: #181818;
+}
+
+.game-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid #333;
+
+    color: #666;
+}
