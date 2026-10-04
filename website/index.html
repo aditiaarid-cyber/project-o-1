@@ -3,56 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Project O</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>PROJECT O</h1>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            PROJECT <span>O</span>
+        </div>
 
         <nav>
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="games.html">Games</a>
             <a href="#">About</a>
         </nav>
     </header>
 
+
+    <!-- HERO -->
     <main>
 
         <section class="hero">
-            <h2>Welcome to Project O</h2>
 
-            <p>
-                Platform untuk bermain berbagai board game
-                bersama teman.
-            </p>
+            <div class="hero-content">
 
-            <button>Explore Games</button>
-        </section>
-
-        <section class="games">
-            <h2>Our Games</h2>
-
-            <div class="game-card">
-                <h3>Werewolf</h3>
-
-                <p>
-                    Permainan deduksi sosial bersama teman.
+                <p class="hero-label">
+                    PROJECT O COLLECTION
                 </p>
 
-                <button>Play</button>
+                <h1>
+                    PLAY.<br>
+                    THINK.<br>
+                    <span>SURVIVE.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Platform permainan yang dirancang untuk
+                    dimainkan bersama teman, menguji strategi,
+                    keberanian, dan kemampuan membaca situasi.
+                </p>
+
+                <a href="games.html" class="btn">
+                    EXPLORE GAMES
+                </a>
+
             </div>
+
+            <div class="hero-decoration">
+                <div class="circle"></div>
+                <div class="line line-one"></div>
+                <div class="line line-two"></div>
+            </div>
+
+        </section>
+
+
+        <!-- OUR GAMES -->
+        <section class="games">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    PROJECT O COLLECTION
+                </p>
+
+                <h2>
+                    OUR GAMES
+                </h2>
+
+                <p>
+                    Pilih permainan dan mulai tantanganmu.
+                </p>
+
+            </div>
+
+
+            <div class="game-grid">
+
+                <!-- WEREWOLF -->
+                <article class="game-card">
+
+                    <div class="game-number">
+                        01
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            SOCIAL DEDUCTION
+                        </p>
+
+                        <h3>
+                            WEREWOLF
+                        </h3>
+
+                        <p>
+                            Temukan siapa yang berbohong,
+                            percaya pada temanmu, dan
+                            bertahan sampai akhir.
+                        </p>
+
+                        <a href="werewolf.html" class="card-btn">
+                            PLAY GAME →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COMING SOON -->
+                <article class="game-card coming-soon">
+
+                    <div class="game-number">
+                        02
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            COMING SOON
+                        </p>
+
+                        <h3>
+                            UNKNOWN
+                        </h3>
+
+                        <p>
+                            Game berikutnya sedang
+                            dipersiapkan oleh Project O.
+                        </p>
+
+                        <span class="card-btn disabled">
+                            COMING SOON
+                        </span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Project O</p>
+
+        <p>
+            © 2026 PROJECT O
+        </p>
+
+        <p>
+            PLAY • THINK • SURVIVE
+        </p>
+
     </footer>
+
 
     <script src="script.js"></script>
 

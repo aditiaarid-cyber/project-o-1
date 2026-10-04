@@ -1,174 +1,748 @@
+/* =========================================
+   PROJECT O - MAIN STYLE
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
-    min-height: 100vh;
+html {
+    scroll-behavior: smooth;
 }
 
-/* HEADER */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08090d;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-header {
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    width: 100%;
+    padding: 24px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 60px;
+    border-bottom: 1px solid #20222a;
 
-    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 10;
 }
 
-header h1 {
-    font-size: 24px;
+.logo {
+    font-size: 20px;
+    font-weight: 800;
     letter-spacing: 3px;
 }
 
-nav {
+.logo span {
+    color: #6c8cff;
+}
+
+.navbar nav {
     display: flex;
-    gap: 30px;
+    gap: 35px;
 }
 
-nav a {
-    color: #fff;
+.navbar nav a {
+    color: #9b9da7;
     text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #aaa;
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffffff;
 }
 
-/* HERO */
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
-    text-align: center;
-    padding: 120px 20px;
+    min-height: 720px;
+
+    padding: 120px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    border-bottom: 1px solid #20222a;
 }
 
-.hero h2 {
-    font-size: 56px;
-    margin-bottom: 20px;
+.hero-content {
+    max-width: 650px;
+
+    position: relative;
+    z-index: 2;
 }
 
-.hero p {
-    color: #aaa;
-    font-size: 18px;
+.hero-label {
+    color: #6c8cff;
+
+    font-size: 12px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 9vw, 120px);
+
+    line-height: 0.9;
+    letter-spacing: -5px;
+
     margin-bottom: 35px;
 }
 
-button {
-    padding: 12px 24px;
+.hero h1 span {
+    color: #6c8cff;
+}
 
-    border: none;
-    border-radius: 6px;
+.hero-description {
+    max-width: 500px;
 
-    background: #fff;
-    color: #111;
+    color: #9699a5;
 
-    font-size: 16px;
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 28px;
+
+    background: #ffffff;
+    color: #08090d;
+
+    text-decoration: none;
+
+    font-size: 13px;
     font-weight: bold;
+    letter-spacing: 1px;
 
-    cursor: pointer;
+    transition: 0.3s;
 }
 
-button:hover {
-    background: #ddd;
+.btn:hover {
+    background: #6c8cff;
+    color: #ffffff;
+
+    transform: translateY(-3px);
 }
 
-/* GAMES */
+
+/* =========================================
+   HERO DECORATION
+========================================= */
+
+.hero-decoration {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -150px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    opacity: 0.7;
+}
+
+.circle {
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid #252a38;
+
+    border-radius: 50%;
+
+    top: 70px;
+    left: 70px;
+}
+
+.line {
+    position: absolute;
+
+    width: 500px;
+    height: 1px;
+
+    background: #252a38;
+
+    top: 300px;
+    left: 50px;
+}
+
+.line-one {
+    transform: rotate(45deg);
+}
+
+.line-two {
+    transform: rotate(-45deg);
+}
+
+
+/* =========================================
+   GAMES SECTION
+========================================= */
 
 .games {
-    padding: 60px;
+    padding: 120px 7%;
 }
 
-.games > h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.section-heading {
+    margin-bottom: 60px;
 }
+
+.section-label {
+    color: #6c8cff;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: 55px;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child {
+    color: #777a85;
+}
+
+
+/* =========================================
+   GAME GRID
+========================================= */
+
+.game-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   GAME CARD
+========================================= */
 
 .game-card {
-    max-width: 350px;
+    min-height: 390px;
 
-    padding: 30px;
+    padding: 35px;
 
-    border: 1px solid #333;
-    border-radius: 10px;
+    border: 1px solid #252833;
 
-    background: #181818;
+    background: #0d0f15;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transition: 0.3s;
+
+    position: relative;
+    overflow: hidden;
 }
 
-.game-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.game-card:hover {
+    border-color: #6c8cff;
+
+    transform: translateY(-5px);
 }
 
-.game-card p {
-    color: #aaa;
-    margin-bottom: 20px;
+.game-number {
+    color: #555966;
+
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
-/* FOOTER */
+.game-info {
+    max-width: 450px;
+}
+
+.game-category {
+    color: #6c8cff;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.game-info h3 {
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 15px;
+}
+
+.game-info > p:not(.game-category) {
+    color: #858894;
+
+    margin-bottom: 25px;
+
+    max-width: 400px;
+}
+
+.card-btn {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    color: #6c8cff;
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.disabled {
+    color: #454852;
+}
+
+.coming-soon {
+    opacity: 0.55;
+}
+
+.coming-soon:hover {
+    opacity: 0.8;
+
+    border-color: #252833;
+
+    transform: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-    margin-top: 80px;
-    padding: 30px;
+    padding: 30px 7%;
 
-    text-align: center;
+    border-top: 1px solid #20222a;
 
-    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
 
-    color: #666;
+    color: #555966;
+
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 
-/* MOBILE */
 
-@media (max-width: 600px) {
+/* =========================================
+   MOBILE
+========================================= */
 
-    header {
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 6%;
     }
 
-    header h1 {
-        font-size: 22px;
+    .navbar nav {
+        gap: 18px;
     }
 
-    nav {
-        gap: 20px;
+    .navbar nav a {
+        font-size: 12px;
     }
+
 
     .hero {
-        padding: 80px 20px;
+        min-height: 650px;
+
+        padding: 90px 6%;
+
+        align-items: flex-start;
     }
 
-    .hero h2 {
-        font-size: 38px;
+    .hero h1 {
+        font-size: 65px;
+
+        letter-spacing: -3px;
     }
 
-    .hero p {
-        font-size: 16px;
-        line-height: 1.6;
+    .hero-description {
+        font-size: 15px;
     }
+
+    .hero-decoration {
+        right: -300px;
+
+        opacity: 0.35;
+    }
+
 
     .games {
-        padding: 40px 20px;
+        padding: 80px 6%;
     }
 
-    .games > h2 {
-        font-size: 28px;
+    .section-heading h2 {
+        font-size: 42px;
+    }
+
+
+    .game-grid {
+        grid-template-columns: 1fr;
     }
 
     .game-card {
-        width: 100%;
+        min-height: 340px;
     }
 
-    button {
-        width: 100%;
+    .game-info h3 {
+        font-size: 35px;
+    }
+
+
+    footer {
+        padding: 25px 6%;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+
+/* =========================================
+   GAMES PAGE
+========================================= */
+
+.games-page {
+    min-height: 750px;
+    padding: 120px 7%;
+}
+
+.games-page .section-heading {
+    max-width: 700px;
+}
+
+.games-page .section-heading h1 {
+    font-size: clamp(65px, 9vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.games-page .section-heading > p:last-child {
+    max-width: 500px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   GAMES PAGE - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .games-page {
+        padding: 80px 6%;
+    }
+
+    .games-page .section-heading h1 {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+
+}
+
+/* =========================================
+   WEREWOLF PAGE
+========================================= */
+
+.werewolf-hero {
+    min-height: 720px;
+
+    padding: 120px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    overflow: hidden;
+
+    border-bottom: 1px solid #20222a;
+}
+
+.werewolf-content {
+    max-width: 650px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.werewolf-content h1 {
+    font-size: clamp(75px, 11vw, 150px);
+
+    line-height: 0.82;
+    letter-spacing: -7px;
+
+    margin-bottom: 35px;
+}
+
+.werewolf-content h1 span {
+    color: #6c8cff;
+}
+
+.werewolf-description {
+    max-width: 500px;
+
+    color: #9699a5;
+
+    font-size: 17px;
+
+    margin-bottom: 40px;
+}
+
+.werewolf-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.werewolf-actions .btn {
+    border: none;
+    cursor: pointer;
+}
+
+.back-btn {
+    color: #777a85;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   WEREWOLF DECORATION
+========================================= */
+
+.werewolf-decoration {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -100px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    opacity: 0.8;
+}
+
+.wolf-circle {
+    position: absolute;
+
+    width: 460px;
+    height: 460px;
+
+    border: 1px solid #252a38;
+
+    border-radius: 50%;
+
+    top: 70px;
+    left: 70px;
+}
+
+.wolf-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border: 1px solid #1c1f29;
+
+    border-radius: 50%;
+
+    top: 49px;
+    left: 49px;
+}
+
+.wolf-line {
+    position: absolute;
+
+    width: 520px;
+    height: 1px;
+
+    background: #252a38;
+
+    top: 300px;
+    left: 40px;
+}
+
+.wolf-line-one {
+    transform: rotate(45deg);
+}
+
+.wolf-line-two {
+    transform: rotate(-45deg);
+}
+
+.wolf-number {
+    position: absolute;
+
+    right: 40px;
+    bottom: 45px;
+
+    color: #303440;
+
+    font-size: 100px;
+    font-weight: bold;
+
+    letter-spacing: -5px;
+}
+
+
+/* =========================================
+   WEREWOLF INFO
+========================================= */
+
+.werewolf-info {
+    padding: 120px 7%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    border-bottom: 1px solid #20222a;
+}
+
+.info-block h2 {
+    font-size: 70px;
+
+    line-height: 0.9;
+    letter-spacing: -4px;
+}
+
+.info-description {
+    max-width: 500px;
+
+    padding-top: 35px;
+}
+
+.info-description p {
+    color: #858894;
+
+    font-size: 16px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   WEREWOLF MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .werewolf-hero {
+        min-height: 650px;
+
+        padding: 90px 6%;
+
+        align-items: flex-start;
+    }
+
+    .werewolf-content h1 {
+        font-size: 80px;
+
+        letter-spacing: -4px;
+    }
+
+    .werewolf-description {
+        font-size: 15px;
+    }
+
+    .werewolf-actions {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .werewolf-decoration {
+        right: -320px;
+
+        opacity: 0.3;
+    }
+
+    .werewolf-info {
+        padding: 80px 6%;
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .info-block h2 {
+        font-size: 55px;
     }
 
 }

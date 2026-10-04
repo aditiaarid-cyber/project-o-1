@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,39 +12,147 @@
 
 <body>
 
-    <header>
-        <h1>PROJECT O</h1>
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            PROJECT <span>O</span>
+        </div>
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="games.html">Games</a>
-            <a href="#">About</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="games.html" class="active">
+                Games
+            </a>
+
+            <a href="#">
+                About
+            </a>
+
         </nav>
+
     </header>
+
+
+    <!-- GAME LIBRARY -->
 
     <main>
 
-        <section class="games">
-            <h2>Our Games</h2>
+        <section class="games-page">
 
-            <div class="game-card">
-                <h3>Werewolf</h3>
+            <div class="section-heading">
 
-                <p>
-                    Permainan deduksi sosial bersama teman.
+                <p class="section-label">
+                    PROJECT O COLLECTION
                 </p>
 
-                <a href="werewolf.html">
-                    <button>Play</button>
-                </a>
+                <h1>
+                    GAME<br>
+                    LIBRARY
+                </h1>
+
+                <p>
+                    Pilih permainan yang ingin kamu
+                    mainkan bersama teman.
+                </p>
+
             </div>
+
+
+            <div class="game-grid">
+
+
+                <!-- WEREWOLF -->
+
+                <article class="game-card">
+
+                    <div class="game-number">
+                        01
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            SOCIAL DEDUCTION
+                        </p>
+
+                        <h2>
+                            WEREWOLF
+                        </h2>
+
+                        <p>
+                            Permainan deduksi sosial.
+                            Cari tahu siapa yang berbohong
+                            sebelum mereka menguasai permainan.
+                        </p>
+
+                        <a href="werewolf.html" class="card-btn">
+                            PLAY GAME →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COMING SOON -->
+
+                <article class="game-card coming-soon">
+
+                    <div class="game-number">
+                        02
+                    </div>
+
+                    <div class="game-info">
+
+                        <p class="game-category">
+                            COMING SOON
+                        </p>
+
+                        <h2>
+                            UNKNOWN
+                        </h2>
+
+                        <p>
+                            Permainan baru sedang
+                            dipersiapkan oleh Project O.
+                        </p>
+
+                        <span class="card-btn disabled">
+                            COMING SOON
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
         </section>
 
     </main>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>© 2026 Project O</p>
+
+        <p>
+            © 2026 PROJECT O
+        </p>
+
+        <p>
+            PLAY • THINK • SURVIVE
+        </p>
+
     </footer>
+
 
 </body>
 </html>
