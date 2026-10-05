@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project O</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
 </head>
 
 <body>
+
+    <script>
+        const supabaseClient = window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_KEY
+        );
+
+        supabaseClient.auth.getSession().then(({ data }) => {
+            if (!data.session) {
+                window.location.href = "login.html";
+            }
+        });
+    </script>
 
     <!-- NAVBAR -->
     <header class="navbar">

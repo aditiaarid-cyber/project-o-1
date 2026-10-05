@@ -50,3 +50,5 @@ loginMessage.textContent = "Login berhasil!";
 setTimeout(function () {
     window.location.href = "index.html";
 }, 500);
+
+});
