@@ -40,3 +40,24 @@ async function loadProfile() {
 }
 
 loadProfile();
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", async () => {
+
+            const { error } =
+                await supabaseClient.auth.signOut();
+
+            if (error) {
+                alert("Gagal logout: " + error.message);
+                return;
+            }
+
+            window.location.href = "login.html";
+        });
+    }
+
+});

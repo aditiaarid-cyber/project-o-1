@@ -24,18 +24,32 @@
         });
     </script>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">
-            PROJECT <span>O</span>
-        </div>
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
+    <!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        PROJECT <span>O</span>
+    </div>
+
+    <div class="menu-wrapper">
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+            ☰
+        </button>
+
+        <nav class="menu-dropdown" id="menuDropdown">
+            <a href="index.html">Home</a>
             <a href="games.html">Games</a>
             <a href="#">About</a>
+            <a href="profile.html">Profile</a>
+
+            <div class="menu-divider"></div>
+
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
         </nav>
-    </header>
+    </div>
+</header>
 
 
     <!-- HERO -->
@@ -182,8 +196,6 @@
 
 
     <script src="script.js"></script>
-    <script src="supabase-config.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <script>
     console.log("Project O: Supabase siap");

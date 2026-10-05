@@ -15,15 +15,30 @@
 
 <body>
 
-    <header>
-        <h1>PROJECT O</h1>
+    <header class="navbar">
+    <div class="logo">
+        PROJECT <span>O</span>
+    </div>
 
-        <nav>
+    <div class="menu-wrapper">
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+            ☰
+        </button>
+
+        <nav class="menu-dropdown" id="menuDropdown">
             <a href="index.html">Home</a>
             <a href="games.html">Games</a>
+            <a href="#">About</a>
             <a href="profile.html">Profile</a>
+
+            <div class="menu-divider"></div>
+
+            <button id="logoutBtn" class="logout-btn">
+                Logout
+            </button>
         </nav>
-    </header>
+    </div>
+</header>
 
 
     <main>
@@ -75,6 +90,43 @@
 
 
     <script src="profile.js"></script>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const menuDropdown = document.getElementById("menuDropdown");
+        const logoutBtn = document.getElementById("logoutBtn");
+
+    // Buka / tutup menu
+        menuToggle.addEventListener("click", function (event) {
+            event.stopPropagation();
+            menuDropdown.classList.toggle("show");
+        });
+
+    // Logout
+        logoutBtn.addEventListener("click", async function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const { error } = await supabaseClient.auth.signOut();
+
+            if (error) {
+                alert("Gagal logout: " + error.message);
+                return;
+            }
+
+            window.location.href = "login.html";
+        });
+
+    // Tutup menu jika klik di luar
+        document.addEventListener("click", function (event) {
+            if (
+                !menuToggle.contains(event.target) &&
+                !menuDropdown.contains(event.target)
+            ) {
+                menuDropdown.classList.remove("show");
+            }
+        });
+    </script>
 
 </body>
 
