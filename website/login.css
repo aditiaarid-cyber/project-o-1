@@ -1,0 +1,210 @@
+/* =========================================
+   PROJECT O - LOGIN PAGE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: #0b0c0f;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HALAMAN LOGIN */
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* KOTAK LOGIN */
+
+.login-box {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+/* LABEL PROJECT O */
+
+.section-label {
+    margin: 0 0 25px 0;
+    color: #6c8cff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* JUDUL */
+
+.login-box h1 {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    font-size: 72px;
+    line-height: 0.9;
+    letter-spacing: -4px;
+    font-weight: 800;
+}
+
+.login-box h1 span {
+    color: #6c8cff;
+}
+
+/* DESKRIPSI */
+
+.login-description {
+    margin: 0 0 40px 0;
+    color: #8b8f9a;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* FORM */
+
+#loginForm {
+    width: 100%;
+    margin: 0;
+}
+
+/* GROUP INPUT */
+
+.form-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+/* LABEL INPUT */
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: #8b8f9a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* INPUT */
+
+.form-group input {
+    display: block;
+
+    width: 100%;
+    height: 54px;
+
+    margin: 0;
+    padding: 0 16px;
+
+    border: 1px solid #292c35;
+    border-radius: 0;
+
+    outline: none;
+
+    background: #111318;
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.form-group input::placeholder {
+    color: #555963;
+}
+
+.form-group input:focus {
+    border-color: #6c8cff;
+}
+
+/* TOMBOL */
+
+#loginForm .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 54px;
+
+    margin: 8px 0 0 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+
+    background: #ffffff;
+    color: #0b0c0f;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+#loginForm .btn:hover {
+    background: #6c8cff;
+    color: #ffffff;
+}
+
+/* PESAN LOGIN */
+
+#loginMessage {
+    min-height: 20px;
+
+    margin: 15px 0 0 0;
+
+    color: #8b8f9a;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* LINK DAFTAR */
+
+.register-link {
+    margin: 28px 0 0 0;
+
+    color: #777b85;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.register-link a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register-link a:hover {
+    color: #6c8cff;
+}
+
+/* HP */
+
+@media (max-width: 600px) {
+
+    .login-page {
+        padding: 30px 20px;
+    }
+
+    .login-box h1 {
+        font-size: 56px;
+        letter-spacing: -3px;
+    }
+
+}

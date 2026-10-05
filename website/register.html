@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daftar - Project O</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-box">
+
+            <p class="section-label">
+                PROJECT O
+            </p>
+
+            <h1>JOIN<br><span>PROJECT O.</span></h1>
+
+            <p class="login-description">
+                Buat akun untuk mulai bermain dan menyimpan progress kamu.
+            </p>
+
+            <form id="registerForm">
+
+                <div class="form-group">
+                    <label for="displayName">NAMA</label>
+                    <input
+                        type="text"
+                        id="displayName"
+                        placeholder="Masukkan nama"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Masukkan email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">PASSWORD</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Buat password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="btn">
+                    DAFTAR
+                </button>
+
+                <p id="registerMessage"></p>
+
+            </form>
+
+            <p class="register-link">
+                Sudah punya akun?
+                <a href="login.html">Login</a>
+            </p>
+
+        </div>
+
+    </main>
+
+    <script src="supabase-config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="register.js"></script>
+
+</body>
+
+</html>
